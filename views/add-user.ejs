@@ -1,0 +1,58 @@
+<!-- include header -->
+<%- include('header') %>
+
+
+<div class="col-6 container-fluid p-4">
+    <div class="text-center bg-primary d-block"> <a  style="color: #eee;" class="btn"> Add User</a> <i class="fas fa-user"></i> </div>
+
+    <form action="/api/add-user" method="post"> 
+        <div class="form-group">
+            <!-- username input -->
+                <label for="exampleFormControlTextarea3" >UserName</label>
+                <input class="form-control" name = username rows="1">
+                <!-- email input -->
+                <label for="exampleFormControlTextarea3">EmailAddress</label>
+                <input class="form-control" name = email rows="1">
+                <!-- gender -->
+                <div class="d-flex justify-content-around  p-4">
+                    
+                  
+                   <div><label for="exampleFormControlTextarea3" class="r-0">Gender</label></div> 
+                  <div><input class="form-control w-4" name = gender rows="1"></div>  
+    <script src="../assets/index.js"></script>
+      
+                </div>
+               
+                <div class="form-group text-center bg-primary">
+                    <button type="submit" class="btn text-dark  text-center" id="add-user">Save</button>
+                </div>
+                  
+              </div>
+        
+    </form>
+    
+</div>
+
+<script src="/index.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- include footer -->
+<%- include('footer') %>

@@ -1,0 +1,45 @@
+<!-- include header -->
+<%- include('header') %>
+
+<div class="col-6 container-fluid p-4">
+    <div class="text-center bg-primary d-block"> <a  style="color: #eee;" class="btn"> Update User</a> <i class="fas fa-user"></i> </div>
+
+    <form  action="/api/update-user/<%=user._id%>" method="POST">
+
+        <div class="form-group">
+            <!-- formeruser -->
+            
+            <br>
+            <!-- <input type="hidden" name="id" value="<%= user._id %>"> -->
+            <!-- username input -->
+                <label for="exampleFormControlTextarea3" >UPDATE-NAME</label>
+                <input class="form-control" name = username rows="1"value="<%= user.name%>">
+                <!-- email input -->
+                <label for="exampleFormControlTextarea3">UPDATE-EMAIL</label>
+                <input class="form-control" name = email rows="1" value="<%= user.email%>"></textarea>
+                <!-- gender -->
+                <div class="d-flex p-4 justify-content-around">
+                    <label for="exampleFormControlTextarea3">GENDER</label>
+                    <div><input class="form-control w-4" name = gender rows="1" value="<%= user.gender%>"></div>  
+                </div>
+               
+                <div class="form-group text-center bg-primary">
+                    <button type="submit" class="btn text-dark  text-center">Save</button>
+                </div>
+        
+
+
+
+        
+    </form>
+    
+    
+</div>
+
+
+
+
+
+
+<!-- include footer -->
+<%- include('footer') %>

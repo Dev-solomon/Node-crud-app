@@ -1,0 +1,64 @@
+<!-- include header -->
+<%- include('header') %>
+<div class="bg-primary container-fluid col-6 d-flex justify-content-around"> <a href="/add-user" style="color: #eee;" class="btn"> New User</a></div>
+
+
+<% for(var i = 0; i < users.length; i++) { %>
+
+
+
+
+
+
+<div class="col-6 container-fluid  bo">
+    <table class="table">
+        <thead class="thead-dark"> 
+            <tr class="d-flex justify-content-between">
+           <th>ID</th>
+           <th>Name</th>
+           <th>@Email</th>
+           <th>Gender</th>
+           <th>Action</th>
+        </tr>
+           
+        </thead>
+
+     <form action="/" method="POST" >
+          
+         
+             <tbody>
+                 <tr class="d-flex justify-content-between">
+                   <td><%= i + 1 %></td>
+                    <td><%= users[i].name %></td>
+                    <td><%= users[i].email %></td>
+                    <td><%= users[i].gender %></td>
+                    <td >
+                         
+                            <a class=" btn border-shadow update bg-primary" href="/update-user?id=<%= users[i]._id%>">
+                                <span class="text-gradient"><i class="fas fa-pencil"></i></span>
+                            </a>
+                            <a class="btn border-shadow delete bg-danger" href="/api/delete-user/<%= users[i]._id%>">
+                                <span class="text-gradient"><i class="fas fa-trash"></i></span>
+                            </a>
+                         </div>
+                        
+                 </tr>
+                
+               </tbody>
+             </tr>
+         </table>
+     </form>
+
+ 
+</div>
+
+<% } %>
+
+
+
+
+
+
+
+<!-- include footer -->
+<%- include('footer') %>
