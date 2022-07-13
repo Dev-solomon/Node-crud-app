@@ -31,7 +31,7 @@ exports.create = (req,res)=>{
 //reading from the database
 exports.homeroute = (req, res) => {
     // Make a get request to /api/users
-    axios.get('http://localhost:3000/api/users')
+    axios.get('https://mycrud-application.herokuapp.com//api/users')
         .then(function(response){
             console.log("success");
             res.render('index', { users : response.data });
@@ -99,7 +99,7 @@ exports.update = (req,res) =>{
 }
 
 exports.update_user = (req, res) =>{
-    axios.get('http://localhost:3000/api/users', { params : { id : req.query.id }})
+    axios.get('https://mycrud-application.herokuapp.com//api/users', { params : { id : req.query.id }})
         .then(function(userdata){
             res.render("update-user", { user : userdata.data})
         })
