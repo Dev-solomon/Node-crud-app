@@ -4,7 +4,6 @@
   "description": "crudapp for project",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js",
     "start": "node server.js"
   }, 
   "author": "solomon ntia",
